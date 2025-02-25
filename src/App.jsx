@@ -1,14 +1,13 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import CarouselEffect from "./Components/Carousel/CarouselEffect";
 
+import Routing from './Components/Router/Router'
 
 function App() {
   return (
-    <div>
-<Header/>
-<CarouselEffect/>
-    </div>
+    <>
+
+<Routing/>
+    </>
   );
 }
 

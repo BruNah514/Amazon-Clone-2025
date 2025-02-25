@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./carousel.module.css"
 const CarouselEffect = () => {
   return (
-    <div>
+    <div>  
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
