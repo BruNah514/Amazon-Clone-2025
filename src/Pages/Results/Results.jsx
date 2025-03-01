@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+ import React, { useEffect } from "react";
 import classes from "./Results.module.css";
 import LayOut from "../../Components/LayOut/LayOut";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../Api/endPoints";
-import ProductCard from "../../Components/Product/ProductCard";
 
 function Results() {
   const [results, setResults] = useState([]);
@@ -12,6 +11,7 @@ function Results() {
   useEffect(() => {
     axios
       .get(`${productUrl}/products/category/${categoryName}`)
+
       .then((res) => {
         setResults(res.data);
         console.log(res.data);
@@ -20,7 +20,7 @@ function Results() {
       .catch((err) => {
         console.log(err);
       });
-  }, [categoryName]);
+  }, []);
   return (
     <LayOut>
       <section>
@@ -29,7 +29,11 @@ function Results() {
         <hr />
         <div className={classes.products_container}>
           {results?.map((product) => (
-            <ProductCard key={product.id} renderAdd={true} product={product} />
+            <ProductCard
+             key={product.id}
+             renderAdd={true}
+              product={product}
+              renderDesc={false}/>
           ))}
         </div>
       </section>

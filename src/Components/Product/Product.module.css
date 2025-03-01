@@ -1,4 +1,4 @@
-.card_container {
+ .card_container {
   width: 230px;
   /* height: 330px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -42,8 +42,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   max-width: 1200px;
-  margin: 70px auto 100px auto;
-  gap: 30px;
+  margin: 100px auto 100px auto;
+  gap: 50px;
   justify-items: center;
 }
 .products_container section {
@@ -66,11 +66,18 @@
   width: 150px;
   margin-right: 40px;
 }
-.product_flexed img{
+.product_flexed img {
   height: 50vh;
 }
-
-.some-class {
-  display: flex;
-  flex-direction: column;
+.product_flexed img {
+  width: 300px !important;
+  height: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .product_flexed {
+    display: flex;  /* Correct syntax */
+    flex-direction: column;
+  }
+}
+

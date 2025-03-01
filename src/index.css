@@ -1,4 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+  --primary-color: #febd69;
+  --primary-shade: #d49644;
 }

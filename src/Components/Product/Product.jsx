@@ -1,31 +1,43 @@
-import React from "react";
+ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
+import Loader from "../Loader/Loader";
 import classes from "./Product.module.css";
 
 function Product() {
-  const [product, setPoduct] = useState();
+  const [product, setProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
-        setPoduct(res.data);
+        setProduct(res.data);
+          setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false);
       });
   }, []);
-
   return (
     <>
-      <section className={classes.products_container}>
-        {product?.map((singleProduct) => (
-          <ProductCard key={singleProduct.id} product={singleProduct} />
-        ))}
-      </section>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <section className={classes.products_container}>
+          {product?.map((singleProduct) => {
+            return (
+              <ProductCard
+                renderAdd={true}
+                product={singleProduct}
+                key={singleProduct.id}
+              />
+            );
+          })}
+        </section>
+      )}
     </>
   );
 }
-
-export default Product;
+export default Product;
