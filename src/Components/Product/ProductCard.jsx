@@ -4,7 +4,7 @@ import CurrencyFormatter from "../CurrencyFormatter/CurrencyFormatter";
 import classes from "./Product.module.css";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
-import { Type } from "../../Utility/action.Type";
+import { Type } from "../../Utility/action";
 
 function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { title, image, id, rating, price, description } = product;
@@ -32,7 +32,6 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       }`}
     >
       <Link to={`/products/${id}`}>
-       
         <img src={image} alt={title} className={classes.img_container} />
       </Link>
       <div>
@@ -47,7 +46,6 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
           <CurrencyFormatter amount={price} />
         </div>
 
-       
         {renderAdd && (
           <button className={classes.button} onClick={addToCart}>
             Add to cart
