@@ -3,7 +3,7 @@ import Routing from "./Components/Router/Router.jsx";
 import { DataContext } from "./Components/DataProvider/DataProvider.jsx";
 import { Type } from "./Utility/action.js";
 import "./App.css";
-import { auth } from "./Utility/firebase.js";
+import { auth } from "./Utility/Firebase.js";
 
 
 function App() {
