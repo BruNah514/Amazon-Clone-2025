@@ -6,12 +6,13 @@ import "firebase/compat/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBDmb8eZ3EBB0pwVNrt6f-hvA0wNEvcBH0",
-  authDomain: "clone-25-361fd.firebaseapp.com",
-  projectId: "clone-25-361fd",
-  storageBucket: "clone-25-361fd.firebasestorage.app",
-  messagingSenderId: "1045825901734",
-  appId: "1:1045825901734:web:0244081a6efe53cd361067",
+  apiKey: "AIzaSyCK3DhrYiiyxxHH0yu1-1WlS22DHOVUVeY",
+  authDomain: "clone-2-7765d.firebaseapp.com",
+  projectId: "clone-2-7765d",
+  storageBucket: "clone-2-7765d.firebasestorage.app",
+  messagingSenderId: "94434511085",
+  appId: "1:94434511085:web:229d884dc7b18301bda4e4",
+  measurementId: "G-P759J2R3ZN",
 };
 
 

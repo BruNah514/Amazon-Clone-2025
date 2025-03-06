@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "clone-25-361fd"
-  }
+    "default": "clone-2-7765d",
+    "functions": "clone-2-7765d"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -5,9 +5,9 @@ import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
 import { useStripe, useElements, CardElement, } from "@stripe/react-stripe-js";
 import CurrencyFormat from "../../Components/CurrencyFormatter/CurrencyFormatter";
-import { axiosInstance } from "../../Api/axios";
+import { axiosInstance } from "../../Api/Axios";
 import { ClipLoader } from "react-spinners";
-import { db } from "../../Utility/firebase";
+import { db } from "../../Utility/Firebase";
 import { useNavigate } from "react-router-dom";
 import { Type } from "../../Utility/action";
 function Payment() {
